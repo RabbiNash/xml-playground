@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE films [
+<!ELEMENT films (film*)>
+<!ELEMENT film (title,actor+)>
+<!ATTLIST film id CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+]>
+
+<films>
+	<film id="some124">
+		<title>
+			Someone
+		</title>
+		<actor>
+			Tinashe
+		</actor>
+		<actor>
+			Makuti
+		</actor>
+	</film>
+	<film id="some125">
+		<title>
+			Someone
+		</title>
+		<actor>
+			Tinashe
+		</actor>
+	</film>
+</films>

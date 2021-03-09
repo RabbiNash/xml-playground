@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE films
+[
+<!ELEMENT films (film*)>
+<!ELEMENT film (title,actor+)>
+<!ATTLIST film id CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+]>

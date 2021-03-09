@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "cv" type = "cvType"/>
+
+    <xs:complexType name = "cvType">
+        <xs:sequence>
+            <xs:element name = "title" type = "xs:string"/>
+            <xs:element name = "cvnom" type = "xs:string/">
+            <xs:element name = "etatcivil" type = "civilType"/>
+            <xs:element name = "formations" type = "formationsType">
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "civilType">
+        <xs:sequence>
+            <xs:element name = "nom" type="xs:string"/>
+            <xs:element name = "prenorm" type = "xs:string"/>
+            <xs:element name = "naissance" type = "xs:string"/>
+            <xs:element name = "situation" type="xs:string"/>
+            <xs:element name = "addresse" type = "xs:string"/>
+            <xs:element name = "code_postal" type = "xs:string"/>
+            <xs:element name = "ville" type="xs:string"/>
+            <xs:element name = "pays" type = "xs:string"/>
+            <xs:element name = "telephone" type = "xs:string"/>
+            <xs:element name = "email" type = "xs:string"/>
+            <xs:element name = "caracteristiques" type= "caracteristiquesType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "caracteristiquesType">
+        <xs:sequence>
+            <xs:element name = "caracteristique" minOccurs = 0 maxOccurs = "unbounded" type = "xs:string">
+        </xs:sequence>
+        <xs:attribute name = "caracteristique" type="xs:string">
+    </xs:complexType>
+
+    <xs:complexType name = "formationsType">
+        <xs:sequence>
+            <xs:element name = "formation" minOccurs = 0 maxOccurs = "unbounded" type = "formationType">
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "formationType">
+            <xs:attribute name = "date-iso" type = "xs:date" use="required"/>
+            <xs:attribute name = "date" type = "xs:date" use="required"/>
+            <xs:attribute name = "datefin" type = "xs:date" use="required"/>
+            <xs:attribute name = "intitule" type = "xs:string" use="required"/>
+            <xs:attribute name = "intitule" type = "xs:string" use="required"/>
+    </xs:complexType>
+
+
+</xs:schema>

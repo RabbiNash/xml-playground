@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "films" type = "filmsType"/>
+
+    <xs:complexType name="filmsType">
+        <xs:all>
+            <xs:element name="films" type = "film" minOccurs = 0 maxOccurs = "unbounded">
+        </xs:all>
+    </xs:complexType>
+    <xs:element name="film" type = "filmType"/>
+
+    <xs:complexType name = "filmType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="actor" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name = "id" type="xs:string">
+    </xs:complexType>
+
+</xs:schema>
